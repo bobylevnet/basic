@@ -116,3 +116,30 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+
+header .second-line .right{
+    text-align: right;
+    float: right;
+    display:inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    
+}
+header .second-line .right span{
+   margin-top: 30px;
+   display: block;    
+}
+
+header .second-line .left{
+  	width: 30%;
+    display: inline-block;
+}
+
+header .second-line .left img{
+  	margin-left: 10px;
+}
+
+header .second-line .left span{
+  	display: block;
+}
