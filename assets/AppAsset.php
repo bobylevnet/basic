@@ -25,8 +25,10 @@ class AppAsset extends AssetBundle
     	'css/my.css',
     ];
    
+    
+    
     public $js = [
-    		
+    	'js/carousel.js'		
     ];
    
 

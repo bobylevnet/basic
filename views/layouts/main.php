@@ -8,6 +8,7 @@ use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use app\assets\AppAsset;
+use yii\bootstrap\Carousel;
 
 
 AppAsset::register($this);
@@ -25,7 +26,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <header>
-<div class="wrap">
+
    
    <div class="container">
     <?php
@@ -62,25 +63,61 @@ AppAsset::register($this);
          </div>
      </div>
 </div>    
-    
-    
-    <div class="container">
-    
-<?php  
 
+<div class="three-line">
+    <div class="container">
+        <div class="row">
+            <div  class="nav">
+<?php  
     echo Nav::widget([
-        'options' => ['class' => 'nav-pills navbar-right'],
+        'options' => ['class' => 'nav-pills  nav-justified nav-border'],
         'items' =>   \Yii::$app->params[ 'menuBottom' ],
     	'encodeLabels' => false,
     ]);
     
     
     ?>
-   
+            </div>
+        </div>
     </div>
-
 </div>
-  </header>
+</header>
+
+<div id="slide" class="color1">
+	<div class="container"> 
+
+	<?php  echo  Carousel::widget([
+			
+    'items' => [
+    		
+    		
+        // the item contains only the image
+        //   Html::img('img\accord\present.png',['class'=>'']) ,
+        // equivalent to the above
+        ['content' => '<div class="slide"> </div>'],
+        // the item contains both the image and the caption
+        [
+            'content' => '<div class="slide"> '.Html::img('@web/img/accord/present.png',['class'=>'imgslide']).'</div>',
+            'caption' => '',
+        
+        ],
+    	[
+    		'content' => '<div class="slide"> </div>',
+    		'caption' => '',
+    		
+    	],
+    		
+    ],	
+			'controls' => [
+					'<div class="glyphicon glyphicon-chevron-left" aria-hidden="true"></div>',
+					'<div class="glyphicon glyphicon-chevron-right" aria-hidden="true"></div>'
+			]
+]);
+	?>
+</div>
+</div>
+
+
 
 
 <footer class="footer">

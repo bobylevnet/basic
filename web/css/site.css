@@ -127,7 +127,7 @@ header .second-line .right{
     
 }
 header .second-line .right span{
-   margin-top: 30px;
+   margin-top: 60px;
    display: block;    
 }
 
@@ -142,4 +142,67 @@ header .second-line .left img{
 
 header .second-line .left span{
   	display: block;
+}
+
+header .three-line{
+	border-top: 1px solid #e6e6e6;
+}
+
+
+.nav-border li{
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+}
+
+.front-carusel{
+	width: 100%;
+	background-color: black;
+}
+.carousel{
+	
+}
+
+.img-slider{
+	width: 30%;
+	height: 30%;
+}
+.slide{
+	height: 350px;
+	position: relative;
+}
+
+#slide{
+		height: 350px;
+transition: .2s linear;
+}
+
+
+
+.color1{
+	background-color: rgb(65, 172, 201);
+}
+
+.color2{
+	background-color: rgb(82, 152, 114);
+}
+
+.color3{
+	background-color: rgb(159, 113, 161)
+}
+.carousel-control.left{
+	background-image: none;
+}
+.carousel-control.right{
+	background-image: none;
+}
+
+.imgslide{
+	position: absolute;
+	top: 100%;
+	transition: top 0.3s;
+}
+
+.imgslideshow
+{   
+	top:0%;
 }
