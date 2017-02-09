@@ -127,7 +127,7 @@ header .second-line .right{
     
 }
 header .second-line .right span{
-   margin-top: 30px;
+   margin-top: 60px;
    display: block;    
 }
 
@@ -143,3 +143,111 @@ header .second-line .left img{
 header .second-line .left span{
   	display: block;
 }
+
+header .three-line{
+	border-top: 1px solid #e6e6e6;
+}
+
+
+.nav-border li{
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+}
+
+.front-carusel{
+	width: 100%;
+	background-color: black;
+}
+.carousel{
+	
+}
+
+.img-slider{
+	width: 30%;
+	height: 30%;
+}
+.slide{
+	height: 350px;
+	position: relative;
+}
+
+#slide{
+		height: 350px;
+transition: .2s linear;
+}
+
+
+
+.color1{
+	background-color: rgb(65, 172, 201);
+}
+
+.color2{
+	background-color: rgb(121, 219, 30);
+}
+
+.color3{
+	background-color: rgb(159, 113, 161)
+}
+.carousel-control.left{
+	background-image: none;
+}
+.carousel-control.right{
+	background-image: none;
+}
+
+.imgslidehide{
+	position: absolute;
+	top: 100%;
+
+	left: 60%;
+}
+
+
+.pst-abs{
+	position: absolute;
+
+	left: 100px;
+}
+
+.slide{
+	display: block;
+
+	color: white;
+	font-size: 18px;
+	
+}
+
+.txt-msg{
+	
+	top: 100%;
+	left: 20%;
+	border-top-style: double;
+	border-bottom-style: double;
+	
+}
+.btn{
+	background:#ada69c;
+	top: 100%;
+	opacity: 0.6;
+	color: white;
+	left: 20%;
+	
+}
+
+.btn:hover{
+
+	font-weight: bold;
+	color: white;
+	
+}
+.header
+{
+	top:100%;
+	position: absolute;
+	left: 20%;
+	
+	
+}
+
+

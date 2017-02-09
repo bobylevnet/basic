@@ -8,6 +8,7 @@ use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use app\assets\AppAsset;
+use yii\bootstrap\Carousel;
 
 
 AppAsset::register($this);
@@ -25,7 +26,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <header>
-<div class="wrap">
+
    
    <div class="container">
     <?php
@@ -62,27 +63,69 @@ AppAsset::register($this);
          </div>
      </div>
 </div>    
-    
-    
-    <div class="container">
-    
-<?php  
 
+<div class="three-line">
+    <div class="container">
+        <div class="row">
+            <div  class="nav">
+<?php  
     echo Nav::widget([
-        'options' => ['class' => 'nav-pills navbar-right'],
+        'options' => ['class' => 'nav-pills  nav-justified nav-border'],
         'items' =>   \Yii::$app->params[ 'menuBottom' ],
     	'encodeLabels' => false,
     ]);
     
     
     ?>
-   
+            </div>
+        </div>
     </div>
+</div>
+</header>
+
+<div id="slide" class="">
+	<div class="container"> 
+
+	
+	<?php  echo  Carousel::widget([
+	'options' => ['class' => 'carousel', 'data-interval' => '6000'],
+    'items' => [
+    		
+    		
+        // the item contains only the image
+        //   Html::img('img\accord\present.png',['class'=>'']) ,
+        // equivalent to the above
+        ['content' => '<div  class="slide color1"> <h3 class="header">АКЦИЯ</h3>'.Html::img('@web/img/accord/present.png',['id'=>'slider','class'=>'imgslidehide']).'
+        		<span class="pst-abs txt-msg">Подключение + 1 месяц интернета бесплатно</span>'.
+        		 Html::a("Узнать больше",'',["class"=>"pst-abs btn"])   .'</div>',
+            'caption' => '',],
+        // the item contains both the image and the caption
+        [
+            'content' => '<div  class="slide color2"> <h3 class="header">АКЦИЯ</h3>'.Html::img('@web/img/accord/present.png',['id'=>'slider','class'=>'imgslidehide']).'
+        		<span class="pst-abs txt-msg">Подключение + 1 месяц интернета бесплатно</span>'.
+        		 Html::a("Узнать больше",'',["class"=>"pst-abs btn"])   .'</div>',
+            'caption' => '',
+        
+        ],
+    	[
+    		'content' => '<div class="slide color3"> </div>',
+    		'caption' => '',
+    		
+    	],
+    		
+    ],	
+			'controls' => [
+					'<div class="glyphicon glyphicon-chevron-left" aria-hidden="true"></div>',
+					'<div class="glyphicon glyphicon-chevron-right" aria-hidden="true"></div>'
+			]
+]);
+	?>
+</div>
+</div>
+
+
 
 </div>
-  </header>
-
-
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; ООО "Скай-нет" <?= date('Y') ?></p>
